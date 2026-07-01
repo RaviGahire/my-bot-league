@@ -35,7 +35,7 @@ export const SignUp = () => {
       <div className="relative container mx-auto ">
         {/* background-svgs */}
         <div className="flex justify-around flex-col">
-          <div className=" hidden md:flex justify-between ">
+          <div className="hidden md:flex justify-between ">
             <img
               className="w-99 h-79.5 relative left-25"
               loading="lazy"

@@ -84,14 +84,16 @@ export const NewOtpSection = ({
         </button>
       </div>
       {/* Enter OTP  */}
-      <div className="flex justify-center items-center gap-6 md:gap-8 my-5">
+      <div className="flex justify-center items-center gap-6 md:gap-8 ">
         {otp.map((digit: string, index: number) => (
           <input
+            className=" p-4 w-11.25 h-11.25 md:pr-2 md:pl-5 md:my-4 font-inter md:w-13.75 md:h-14 text-[#999797] 
+            rounded-md border border-[#BDBDBD] focus:outline-none focus:border-[#BDBDBD] inset-shadow-sm 
+            inset-shadow-[#BDBDBD] focus:inset-shadow-none bg-[#bdbdbd2b] transition-shadow duration-150 ease-in"
             key={index}
             ref={(el) => {
               otpRefs.current[index] = el;
             }}
-            className="cna-otp-box"
             value={digit}
             maxLength={1}
             onChange={(e) => handleOtpChange(e.target.value, index)}
@@ -108,14 +110,18 @@ export const NewOtpSection = ({
           className="text-[#8C6CFF] text-[12px] md:text-[14px] font-inter cursor-pointer "
           onClick={onVerifyOtp}
           disabled={isLoading || !otpSent || otpVerified}
-        >
-        
-        </button>
+        ></button>
         <button
           type="button"
           className="text-[12px] md:text-[14px] font-semibold font-inter cursor-pointer pr-4"
         >
-          {otpVerified ? (<span className="text-green-500">Verified ✔</span>) : (<span className=" hover:text-[#5385ed] transition-colors duration-150 ease-in-out ">Verify</span>)}
+          {otpVerified ? (
+            <span className="text-green-500">Verified ✔</span>
+          ) : (
+            <span className=" hover:text-[#5385ed] transition-colors duration-150 ease-in-out ">
+              Verify
+            </span>
+          )}
         </button>
       </div>
     </div>

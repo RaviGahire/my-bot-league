@@ -17,7 +17,7 @@ export const NewSocialAuth = ({ googleAauth, facebookAuth }: SocialAuth) => {
         Login with{" "}
         <img
           className="size-5 md:size-10"
-          src="/public/icons/google-logo.svg"
+          src="/icons/google-logo.svg"
           alt="google-icon"
         />{" "}
       </button>

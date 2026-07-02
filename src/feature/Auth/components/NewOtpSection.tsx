@@ -84,7 +84,7 @@ export const NewOtpSection = ({
         </button>
       </div>
       {/* Enter OTP  */}
-      <div className="flex justify-center items-center gap-6 md:gap-8 ">
+      <div className="flex justify-center items-center gap-6 md:gap-8 pt-4">
         {otp.map((digit: string, index: number) => (
           <input
             className=" p-4 w-11.25 h-11.25 md:pr-2 md:pl-5 md:my-4 font-inter md:w-13.75 md:h-14 text-[#999797] 

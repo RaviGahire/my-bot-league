@@ -1,14 +1,9 @@
 interface Props {
-  title: string;
-  subtitle?: string;
+  // title: string;
+  // subtitle?: string;
   children: React.ReactNode;
 }
 
-export default function AuthCard({ title, subtitle, children }: Props) {
-  return (
-  
-  <div>
-    {children}
-  </div>
-  );
+export default function AuthCard({ children }: Props) {
+  return <div>{children}</div>;
 }

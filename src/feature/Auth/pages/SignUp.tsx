@@ -5,6 +5,8 @@ import { NewTermsSection } from "../components/NewTermsSection";
 import useRegister from "../hooks/useRegister";
 
 export const SignUp = () => {
+
+  //use register hook all methods are declaired in it
   const register = useRegister();
 
   return (
@@ -103,9 +105,11 @@ export const SignUp = () => {
               />
 
               {/* Errors */}
-              {/* {register.error && (
-                <p className="cna-field-error">{register.error}</p>
-              )} */}
+              {register.error && (
+               <div className="w-fit pl-5">
+                 <p className="mx-auto text-red-600 text-[12px]">{register.error}</p>
+               </div>
+              )}
 
               {/* Submit Btn */}
               <div className="pt-5 px-4  ">

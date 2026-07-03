@@ -1,11 +1,11 @@
-import SocialAuth from "./SocialAuth";
 
-type SocialAuth = {
-  googleAauth: unknown;
-  facebookAuth: unknown;
-};
 
-export const NewSocialAuth = ({ googleAauth, facebookAuth }: SocialAuth) => {
+// type SocialAuth = {
+//  googleAauth: unknown;
+//  facebookAuth: unknown;
+// };
+
+export const NewSocialAuth = () => {
   return (
     <div className="flex gap-2 justify-between items-center px-5  ">
       {/* login with google */}

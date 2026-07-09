@@ -140,6 +140,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import PublicRoute from "./PublicRoute";
 import RoleRoute from "./RoleRoute";
 import { AppRole, ADMIN_MIN, ORG_MIN, type AppRoleType } from "../shared/constants/roles";
+import { NewuserDashboard } from "../feature/UserDashboard/pages/NewuserDashboard";
 
 const ADMIN_AND_UP: AppRoleType[] = [AppRole.ADMINISTRATOR, AppRole.SUPER_ADMIN];
 
@@ -195,7 +196,8 @@ function AppRoutes() {
         }
       >
         {/* ── Core user pages ── */}
-        <Route path="/user-dashboard" element={<UserDashboard />} />
+        <Route path="/user-dashboard" element={< NewuserDashboard/>} />
+        // <Route path="/user-dashboard" element={<UserDashboard />} />
         <Route path="/my-team" element={<MyTeams />} />
         <Route path="/create-team" element={<CreateTeam />} />
         <Route path="/profile" element={<ProfilePage />} />

@@ -1,26 +1,36 @@
 @import "tailwindcss";
-.login{
-  padding: 0.6rem 1.2rem !important;
-}
 
 @font-face {
   font-family: Inter;
-  src: url("../assets/fonts/Inter_18pt-Medium.ttf");
+  src: url("./assets/fonts/Inter_18pt-Medium.ttf"), format(ttf);
 }
 
 @font-face {
   font-family: Orbitron;
-  src: url("../assets/fonts/Orbitron-Regular.ttf");
+  src: url("./assets/fonts/Orbitron-Regular.ttf"), format(ttf);
 }
 
 @font-face {
   font-family: Poppins;
-  src: url("../assets/fonts/Poppins-Medium.ttf");
+  src: url("./assets/fonts/Poppins-Medium.ttf"), format(ttf);
 }
 
 @font-face {
   font-family: RacingSansOne;
-  src: url("../assets/fonts/RacingSansOne-Regular.ttf");
+  src: url("./assets/fonts/RacingSansOne-Regular.ttf"), format(ttf);
+}
+
+@font-face {
+  font-family: Sarpanch;
+  src: url("./assets/fonts/Sarpanch-Regular.ttf"), format(ttf);
+}
+
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url("./assets/fonts/SpaceGrotesk-Regular.ttf"), format(ttf);
+}
+
+:root {
 }
 
 @theme {
@@ -28,7 +38,44 @@
   --font-orbitron: "Orbitron", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --font-racing: "RacingSansOne", sans-serif;
-  --background-image-custom-gradient: linear-gradient(180deg, #9d7df9 0%, #708bf4 50%, #5385ed 100%);
+  --font-sarpanch: "Sarpanch", sans-serif;
+  --font-spacegrotesk: "SpaceGrotesk", sans-serif;
+  --background-image-custom-gradient: linear-gradient(
+    180deg,
+    #9d7df9 0%,
+    #708bf4 50%,
+    #5385ed 100%
+  );
+  --color-gradient-start: #0162d1;
+  --color-gradient-end: #8c6cff;
+  --background-image-btn-gradient:linear-gradient(180deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%)
+}
+
+@layer utilities {
+  .border-gradient {
+    border-color: transparent;
+    background-image:
+      linear-gradient(#ffff, #ffff),
+      linear-gradient(180deg,
+        var(--color-gradient-start),
+        var(--color-gradient-end)
+      );
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
   }
-  
-  /* Change the white to any color */
+  .btn-gradient{
+    background-image:linear-gradient(180deg,var(--color-gradient-start),var(--color-gradient-end));
+    background-image:linear-gradient(0deg, #0162d11e 0%,#8c6cff1b 100%)]
+  }
+
+  .text-gradient {
+    background-image: linear-gradient( 180deg,
+      var(--color-gradient-start),
+      var(--color-gradient-end)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}
